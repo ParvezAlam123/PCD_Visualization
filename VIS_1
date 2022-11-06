@@ -1,0 +1,23 @@
+import open3d as o3d 
+import os
+
+
+
+path='/home/parvez/Dataset/PCD_data'
+
+
+
+vis =o3d.visualization.Visualizer()
+vis.create_window("Visualizer", 960, 540)
+
+files = os.listdir(path)
+
+for i in range(len(files)):
+    pcd_path = os.path.join(path, files[i])
+    pcd = o3d.io.read_point_cloud(pcd_path)
+    vis.add_geometry(pcd)
+    vis.poll_events()
+    vis.update_renderer()
+    vis.clear_geometries()
+    #vis.run()
+    
