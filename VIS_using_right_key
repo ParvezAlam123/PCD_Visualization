@@ -1,0 +1,31 @@
+import open3d
+import glob
+
+def vis_dict(dict):
+    pcds=sorted(glob.glob('{}/*.pcd'.format(dict)))
+    vis=open3d.visualization.VisualizerWithKeyCallback()
+    vis.create_window("Visualizer", 960, 540)
+    idx=0
+    pcd=open3d.io.read_point_cloud(pcds[idx])
+    vis.add_geometry(pcd)
+    vis.update_renderer()
+        
+    def right_click(vis):
+        nonlocal idx
+        print('right_click')
+        idx=idx+1
+        vis.clear_geometries()
+        pcd=open3d.io.read_point_cloud(pcds[idx])
+        vis.add_geometry(pcd)
+        
+    def exit_key(vis):
+        vis.destroy_window()
+        
+    vis.register_key_callback(262,right_click)
+    vis.register_key_callback(32,exit_key)
+    vis.poll_events()
+    vis.run()
+    vis.destroy_window()    
+        
+if __name__=='__main__':
+    vis_dict('/home/parvez/Dataset/PCD_data')
