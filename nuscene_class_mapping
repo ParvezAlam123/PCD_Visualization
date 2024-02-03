@@ -1,0 +1,25 @@
+movable_object.debris                             -> debris 
+vehicle.bicycle                                   -> bicycle 
+movable_object.barrier                            -> barrier 
+vehicle.motorcycle                                -> motorcycle 
+vehicle.truck                                     -> truck 
+movable_object.trafficcone                        -> trafficcone 
+vehicle.car                                       -> car 
+human.pedestrian.adult                            -> adult 
+vehicle.construction                              -> construction 
+movable_object.pushable_pullable                  -> pushable_pullable 
+human.pedestrian.construction_worker              -> construction_worker 
+vehicle.bus.rigid                                 -> bus.rigid 
+animal                                            -> animal 
+static_object.bicycle_rack                        -> bicycle_rack 
+vehicle.emergency.ambulance                       -> ambulance 
+vehicle.emergency.police                          -> police 
+vehicle.bus.bendy                                 -> bus.bendy 
+human.pedestrian.child                            -> child 
+human.pedestrian.police_officer                   -> police_officer 
+human.pedestrian.personal_mobility                -> personal_mobility 
+human.pedestrian.stroller                         -> stroller 
+human.pedestrian.wheelchair                       -> wheelchair 
+vehicle.trailer                                   -> trailer 
+
+
